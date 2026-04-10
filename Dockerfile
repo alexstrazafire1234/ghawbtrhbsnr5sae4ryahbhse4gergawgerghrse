@@ -6,6 +6,5 @@ CMD ss-server \
     -s 0.0.0.0 \
     -p 8388 \
     -k "${PASSWORD}" \
-    -m aes-256-gcm \
-    -t 300 \
-    --fast-open
+    -m "${METHOD:-chacha20-ietf-poly1305}" \
+    -t 300
